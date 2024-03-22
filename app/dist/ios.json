@@ -1,0 +1,100 @@
+{
+    "outcome": "ok",
+    "scriptName": "server",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "Field name: \"files\"; filename"
+            ],
+            "level": "log",
+            "timestamp": 1711139312211
+        },
+        {
+            "message": [
+                "Field content: %PDF-1.3\n%���������\n3 0 obj\n<< /Filter /FlateDecode /Length 11 >>\nstream\nx\u0001+T\b\u0004\u0000\u0001�\u0000�\nendstream\nendobj\n1 0 obj\n<< /Type /Page /Parent 2 0 R /Resources 4 0 R /Contents 3 0 R >>\nendobj\n4 0 obj\n<< /ProcSet [ /PDF ] >>\nendobj\n2 0 obj\n<< /Type /Pages /MediaBox [0 0 0 0] /Count 1 /Kids [ 1 0 R ] >>\nendobj\n5 0 obj\n<< /Type /Catalog /Pages 2 0 R >>\nendobj\n6 0 obj\n<< /Producer (macOS Version 14.3.1 \\(Build 23D60\\) Quartz PDFContext) /CreationDate\n(D:20240319215447Z00'00') /ModDate (D:20240319215447Z00'00') >>\nendobj\nxref\n0 7\n0000000000 65535 f \n0000000104 00000 n \n0000000223 00000 n \n0000000022 00000 n \n0000000184 00000 n \n0000000302 00000 n \n0000000351 00000 n \ntrailer\n<< /Size 7 /Root 5 0 R /Info 6 0 R /ID [ <6295ace5a0181ac0f9ec2668ccd9dde7>\n<6295ace5a0181ac0f9ec2668ccd9dde7> ] >>\nstartxref\n514\n%%EOF"
+            ],
+            "level": "log",
+            "timestamp": 1711139312211
+        }
+    ],
+    "eventTimestamp": 1711139312211,
+    "event": {
+        "request": {
+            "url": "https://server.damiantarnawsky.workers.dev/",
+            "method": "POST",
+            "headers": {
+                "accept": "*/*",
+                "accept-encoding": "gzip, br",
+                "accept-language": "en-US,en;q=0.5",
+                "cf-connecting-ip": "68.96.125.147",
+                "cf-ipcountry": "US",
+                "cf-ray": "8688edbd4ac57cc2",
+                "cf-visitor": "{\"scheme\":\"https\"}",
+                "connection": "Keep-Alive",
+                "content-length": "1063",
+                "content-type": "multipart/form-data; boundary=515E2EE8-5F9A-4CAB-B74C-4ED0A97018BF",
+                "host": "server.damiantarnawsky.workers.dev",
+                "priority": "u=3",
+                "user-agent": "App/1 CFNetwork/1494.0.7 Darwin/23.4.0",
+                "x-forwarded-proto": "https",
+                "x-real-ip": "68.96.125.147"
+            },
+            "cf": {
+                "longitude": "-115.26330",
+                "httpProtocol": "HTTP/3",
+                "tlsCipher": "AEAD-AES128-GCM-SHA256",
+                "continent": "NA",
+                "asn": 22773,
+                "clientAcceptEncoding": "gzip, deflate, br",
+                "country": "US",
+                "tlsClientExtensionsSha1": "Okz3E0xAqMetM+tAWu8SxCVH17c=",
+                "verifiedBotCategory": "",
+                "tlsClientAuth": {
+                    "certIssuerDNLegacy": "",
+                    "certIssuerSKI": "",
+                    "certSubjectDNRFC2253": "",
+                    "certSubjectDNLegacy": "",
+                    "certFingerprintSHA256": "",
+                    "certNotBefore": "",
+                    "certSKI": "",
+                    "certSerial": "",
+                    "certIssuerDN": "",
+                    "certVerified": "NONE",
+                    "certNotAfter": "",
+                    "certSubjectDN": "",
+                    "certPresented": "0",
+                    "certRevoked": "0",
+                    "certIssuerSerial": "",
+                    "certIssuerDNRFC2253": "",
+                    "certFingerprintSHA1": ""
+                },
+                "tlsExportedAuthenticator": {
+                    "clientFinished": "80901b17e483793bb1c8d3a57f38609cab90a14c238a73a91247c8c839d56327",
+                    "clientHandshake": "bff091895e10f37d350655604f772d3e454d0190eddf5e6d74464589eb5399b7",
+                    "serverHandshake": "57fb19db0ff2ada5871889defd974143ce51d1e35fdcd48a7201ba12cadc1b45",
+                    "serverFinished": "57ef0bdba0dca10119c43f5571f634addb093dc82f0865b47fe3fccccc0b7622"
+                },
+                "tlsVersion": "TLSv1.3",
+                "city": "Las Vegas",
+                "timezone": "America/Los_Angeles",
+                "colo": "LAX",
+                "tlsClientHelloLength": "274",
+                "edgeRequestKeepAliveStatus": 1,
+                "postalCode": "89128",
+                "region": "Nevada",
+                "latitude": "36.19620",
+                "requestPriority": "",
+                "regionCode": "NV",
+                "asOrganization": "Cox Communications",
+                "metroCode": "839",
+                "tlsClientRandom": "vfU5n9Co0eQdy2A3Pgr5Zhx9qaeBq7D86JOUyLmIwo8="
+            }
+        },
+        "response": {
+            "status": 200
+        }
+    },
+    "id": 3
+}

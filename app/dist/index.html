@@ -1,0 +1,97 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+        content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+</head>
+<style>
+    body {
+        padding-top: 100px;
+    }
+</style>
+<script>
+    const url = 'https://server.damiantarnawsky.workers.dev';
+
+    async function go(event) {
+        event.preventDefault();
+        const data = new FormData();
+        const form = document.getElementById('form');
+        for (const pair of new FormData(form)) {
+            data.append(pair[0], pair[1]);
+        }
+
+        console.log('posting');
+        const r = await fetch(url, {
+            method: 'POST',
+            // headers: { "Transfer-Encoding": "chunked" },
+            body: data,
+        });
+        console.log('getting response');
+        const text = await r.text();
+        document.getElementById('response').innerHTML = text;
+    }
+
+    async function go2(event) {
+        event.preventDefault();
+        let e = document.getElementById("image-file");
+        const form = document.getElementById('form2');
+
+        const formData = new FormData();
+        for (const file of e.files) {
+            formData.append('files', file);
+        }
+
+        console.log('posting');
+        const r = await fetch(url, {
+            method: 'POST',
+            // headers: { "Transfer-Encoding": "chunked" },
+            body: formData,
+        });
+        console.log('getting response');
+        const text = await r.text();
+        document.getElementById('response').innerHTML = text;
+    }
+
+
+    async function post() {
+        const data = { greeting: 'hi', say: 'mom' };
+        const base64Data = btoa(JSON.stringify(data));
+        const r = await fetch(url, {
+            method: 'POST',
+            body: data,
+            headers: {
+                'Content-Type': 'application/json;base64'
+            }
+        });
+        const text = await r.text();
+        document.getElementById('response').innerHTML = text;
+    }
+</script>
+
+<body>
+
+    <form id="form" onsubmit="go(event)">
+        <div>
+            <label for="say">What greeting do you want to say?</label>
+            <input name="say" id="say" value="Hi" />
+        </div>
+        <div>
+            <label for="to">Who do you want to say it to?</label>
+            <input name="to" id="to" value="Mom" />
+        </div>
+        <button type="submit">Send</button>
+    </form>
+
+    <form id="form2" onsubmit="go2(event)">
+        <div>
+            <label for="say">Choose a file</label>
+            <input id="image-file" type="file" />
+        </div>
+        <button type="submit">Send</button>
+    </form>
+    <!-- <button onclick="post()">Post</button> -->
+    <div id="response"></div>
+</body>
+
+</html>

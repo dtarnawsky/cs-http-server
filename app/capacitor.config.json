@@ -1,0 +1,16 @@
+{
+  "appId": "com.app",
+  "appName": "app",
+  "webDir": "dist",
+  "server": {
+    "androidScheme": "https",
+    "allowNavigation": [
+      "server.damiantarnawsky.workers.dev"
+    ]
+  },
+  "plugins": {
+    "CapacitorHttp": {
+      "enabled": true
+    }
+  }
+}
